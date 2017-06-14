@@ -56,8 +56,8 @@ if [ "$1" == "clone" ]; then
 	git remote add origin $CLONE_GIT
 elif [[ "$1" == "init" ]]; then
 	git init
-	git add README.md
-	git commit -m "first commit"
+#	git add README.md
+#	git commit -m "first commit"
 	git remote add origin $CLONE_GIT
 elif [[ "$1" == "add-all" ]]; then
 	echo "upload $USER_GIT to github"
