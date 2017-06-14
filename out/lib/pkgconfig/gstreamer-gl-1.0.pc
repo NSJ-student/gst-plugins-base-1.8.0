@@ -1,0 +1,13 @@
+prefix=/home/ubuntu/gst_1.8.0/out
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/gstreamer-1.0
+pluginsdir=${exec_prefix}/lib/gstreamer-1.0
+
+Name: GStreamer OpenGL Plugins Libraries
+Description: Streaming media framework, OpenGL plugins libraries
+Version: 1.8.0
+Requires: gstreamer-base-1.0 gstreamer-1.0
+
+Libs: -L${libdir} -lgstgl-1.0  -lGL -lX11   -lwayland-cursor -lwayland-egl -lwayland-client   -lEGL -lEGL  
+Cflags: -I${includedir}      -I/usr/include/libdrm  
