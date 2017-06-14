@@ -10,12 +10,15 @@ if [ ! -e /usr/bin/git ]; then
 fi
 
 if [ "$1" != "clone" -a "$1" != "add-all" -a "$1" != "add" -a "$1" != "upload" -a "$1" != "init" ]; then
-	echo "Usage:"
+	echo "Usage :"
 	echo "  $0 init     = init git"
-	echo "  $0 clone     = load from git"
+	echo "  $0 clone    = load from git"
 	echo "  $0 add-all  = add all files in this directory to git"
 	echo "  $0 add # #  = add specified files to git"
 	echo "  $0 upload   = upload to git"
+	echo "Procedure :"
+	echo "  init -> add-all -> upload : git init and upload existing source first time"
+	echo "  clone      ->      upload : load project and update"
 	exit
 fi
 
